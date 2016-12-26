@@ -12,7 +12,7 @@ function MyController ($scope,
   $scope.Checkit = function () {
      console.log("clicked"+$scope);
      if($scope.something.trim()=="")
-       $scope.message="Empty";
+       $scope.message="Please enter data first";
      else
      {
        var ite=$scope.something.split(",");
@@ -23,12 +23,11 @@ function MyController ($scope,
         }
         if(som>3)
           $scope.message="Too much!";
-
         else
-          if(som==0)
+          if(som>0)
             $scope.message="Enjoy!";
           else
-            $scope.message="Empty";          
+            $scope.message="Please enter data first";
      }
   };
 
